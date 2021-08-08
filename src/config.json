@@ -1,0 +1,13 @@
+{
+    "redirectUrl": "",
+    "resourceServerToken": "",
+    "mongo": {
+        "server": "localhost:27017",
+        "username": "",
+        "password": "",
+        "database": "bridge_api",
+        "tokensCollection": "tokens"
+    },
+    "tokenExpirationTime": 5,
+    "secret": "SUPER SECRET KEY"
+}

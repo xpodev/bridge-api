@@ -1,0 +1,33 @@
+{
+  "name": "bridge-api",
+  "version": "1.0.0",
+  "description": "Simple bridge API server to verify identities of requests while keeping resource server safe",
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "build-ts": "tsc",
+    "build": "npm run build-ts",
+    "serve": "node dist/index.js"
+  },
+  "author": "Xpo Development",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "mongodb": "^4.1.0",
+    "node-fetch": "^2.6.1",
+    "readline-sync": "^1.4.10",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/base-64": "^1.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node-fetch": "^2.5.12",
+    "@types/readline-sync": "^1.4.4",
+    "@types/uuid": "^8.3.1"
+  }
+}
