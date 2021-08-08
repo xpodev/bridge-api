@@ -1,8 +1,18 @@
 # bridge-api
 Simple bridge API server to verify identities of requests while keeping resource server safe.
 
+
+## Usage
+To get new token from the server the client should send a request to the API bridge server.
+default is `GET /identity` which sets a cookie named `session_token` with the new token.
+A token will not be generated if the server can not get the remote address of the request and the client will recieve a 400 status code.
+
+After a token was successfully generated and sent to the client, the client can now send any request to the API bridge server and will
+recieve the data from the resource server, while the API bridge server is the one with the actual access to the resource server.
+
+
 ## Config
-`config.json` file includes some configurations to setup the api bridge server.
+`config.json` file includes some configurations to setup the API bridge server.
 ```jsonc
 {
     "redirectUrl": "", // The resource url to redirect all the requests after token is verified
@@ -18,6 +28,7 @@ Simple bridge API server to verify identities of requests while keeping resource
     "secret": "SUPER SECRET KEY" // Server secret
 }
 ```
+
 
 ## Custom TokensDB
 A custom TokensDB class should implement the ITokensDB interface.
